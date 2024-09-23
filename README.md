@@ -560,10 +560,10 @@ generally preferred practice.
   end
   ```
 
-* <a name="true-as-last-condition"></a>
-  Use `true` as the last condition of the `cond` special form when you need a
+* <a name="else-as-last-condition"></a>
+  Use `:else` as the last condition of the `cond` special form when you need a
   clause that always matches.
-  <sup>[[link](#true-as-last-condition)]</sup>
+  <sup>[[link](#else-as-last-condition)]</sup>
 
   ```elixir
   # not preferred
@@ -574,7 +574,7 @@ generally preferred practice.
     1 + 3 == 5 ->
       "Uh, uh"
 
-    :else ->
+    true ->
       "OK"
   end
 
@@ -586,7 +586,7 @@ generally preferred practice.
     1 + 3 == 5 ->
       "Uh, uh"
 
-    true ->
+    :else ->
       "OK"
   end
   ```
